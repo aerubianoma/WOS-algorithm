@@ -21,6 +21,7 @@ axis equal
 grid on
 for i = 0:w
     for j= 0:h
-        plot(x_min*i/w+(1-i/w)*x_max,y_min*j/h+(1-j/h)*y_max,'.','color','red')
+        plot(x_min*(1-i/w)+i/w*x_max,y_min*j/h+(1-j/h)*y_max,'.','color','red')
+        pause(0.0000000001)
     end
 end
