@@ -26,7 +26,7 @@ for path = 1:number_of_paths
       random_direction = [sin(2*pi*random_angle) , cos(2*pi*random_angle)];
       % Choose a random point in the circle
       next_point = current_point + (radius*random_direction);
-      plot(next_point(1),next_point(2),'.','color','blue')
+      %plot(next_point(1),next_point(2),'.','color','blue')
       % Update the distance of the current point to the boundary
       current_distance = distance_to_bdry(next_point,Bdry);
       % Update the point
@@ -36,13 +36,13 @@ for path = 1:number_of_paths
     % Update the estimator
     sum_of_g_values = sum_of_g_values + g(current_point); 
     % Plot the last point of the random walk
-    plot(current_point(1),current_point(2),'.','color','red')
+    %plot(current_point(1),current_point(2),'.','color','red')
     % Reset the plot
     %clf reset
-    plot(Bdry(1),Bdry(2),'color','green')
-    hold on
-    axis equal
-    grid on
+    %plot(Bdry(1),Bdry(2),'color','green')
+    %hold on
+    %axis equal
+    %grid on
 end
 % Solution in the trial point
 solution_at_current_point = sum_of_g_values/number_of_paths;
